@@ -4,7 +4,7 @@
 #online, offline, product
 
 #streamlit, google-genai, reportlab
-#AIzaSyCVFhX6EaTpyl8KO74XfeXxFEbb0bVdd9g
+
 
 import streamlit as st
 from google import genai
@@ -19,7 +19,7 @@ location =st.text_input("Target Country & city")
 biz_type =st.selectbox ("Business type", ["online", "offline", "product", "service"])
 audience = st.text_input("Whose your audience")
 
-client = genai.Client(api_key ="AIzaSyCVFhX6EaTpyl8KO74XfeXxFEbb0bVdd9g")
+client = genai.Client(api_key = os.getenv("API_KEY")
 
 if st.button("Generate report"):
 
@@ -77,3 +77,4 @@ if st.button("Generate report"):
                   )
     
     
+
