@@ -19,7 +19,7 @@ location =st.text_input("Target Country & city")
 biz_type =st.selectbox ("Business type", ["online", "offline", "product", "service"])
 audience = st.text_input("Whose your audience")
 
-client = genai.Client(api_key = os.getenv("API_KEY")
+client = genai.Client(api_key = os.getenv("API_KEY"))
 
 if st.button("Generate report"):
 
@@ -77,4 +77,5 @@ if st.button("Generate report"):
                   )
     
     
+
 
